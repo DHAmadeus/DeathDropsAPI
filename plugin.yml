@@ -1,0 +1,4 @@
+name: DeathDropsAPI
+author: MClaus
+version: 1.0
+main: net.minefs.DeathDropsAPI.Main
