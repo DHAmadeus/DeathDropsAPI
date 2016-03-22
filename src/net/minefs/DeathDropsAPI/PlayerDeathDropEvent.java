@@ -10,6 +10,7 @@ public class PlayerDeathDropEvent extends Event implements Cancellable{
 	private Player p;
 	private ItemStack item;
 	private boolean cancelled;
+	private boolean armor;
 	private static final HandlerList handlers = new HandlerList();
 
 	
@@ -17,8 +18,20 @@ public class PlayerDeathDropEvent extends Event implements Cancellable{
 		this.p = p;
 		this.item = item;
 		this.cancelled = false;
+		this.armor = true;
+	}
+	
+	public PlayerDeathDropEvent(Player p, ItemStack item, boolean isArmor) {
+		this.p = p;
+		this.item = item;
+		this.cancelled = false;
+		this.armor = isArmor;
 	}
 
+	public boolean isArmor(){
+		return this.armor;
+	}
+	
 	public ItemStack getItem() {
 		return this.item;
 	}
