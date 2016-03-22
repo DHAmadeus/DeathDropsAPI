@@ -25,7 +25,7 @@ public final class Listeners implements Listener {
 			ItemStack i = armors[a];
 			if(i==null || i.getType().equals(Material.AIR))
 				continue;
-			PlayerDeathDropEvent ev = new PlayerDeathDropEvent(p, i);
+			PlayerDeathDropEvent ev = new PlayerDeathDropEvent(p, i, true);
 			Bukkit.getPluginManager().callEvent(ev);
 			ItemStack i2 = ev.getItem();
 			if (ev.isCancelled())
