@@ -1,10 +1,4 @@
-<<<<<<< HEAD
 name: DeathDropsAPI
 author: MClaus
 version: 1.6
-=======
-name: DeathDropsAPI
-author: MClaus
-version: 1.0
->>>>>>> bfb138f675c8620c99273c4732a6bad0c8b24ef5
 main: net.minefs.DeathDropsAPI.Main
