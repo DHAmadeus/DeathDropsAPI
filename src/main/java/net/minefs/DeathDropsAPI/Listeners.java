@@ -13,14 +13,18 @@ public final class Listeners implements Listener {
 
 	@EventHandler(priority = EventPriority.MONITOR)
 	public void onDie(PlayerDeathEvent e) {
-		if (e.getKeepInventory())
+		if (e.getKeepInventory()) {
+//			e.getEntity().sendMessage("event is keep");
 			return;
+		}
 		Player p = e.getEntity();
 		if (p.hasPermission("deathdropsapi.keep")) {
 			e.setKeepInventory(true);
+//			p.sendMessage("player has perm");
 			//e.setKeepLevel(true);
 			return;
 		}
+//		p.sendMessage("no keep");
 		if (!Main.newversion) {
 			ItemStack[] armors = p.getInventory().getArmorContents();
 			for (int a = 0; a < armors.length; a++) {
