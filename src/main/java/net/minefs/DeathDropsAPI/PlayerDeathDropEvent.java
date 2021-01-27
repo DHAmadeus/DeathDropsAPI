@@ -6,7 +6,7 @@ import org.bukkit.event.Event;
 import org.bukkit.event.HandlerList;
 import org.bukkit.inventory.ItemStack;
 
-public class PlayerDeathDropEvent extends Event implements Cancellable{
+public class PlayerDeathDropEvent extends Event implements Cancellable {
 	private Player p;
 	private ItemStack item;
 	private boolean cancelled;
